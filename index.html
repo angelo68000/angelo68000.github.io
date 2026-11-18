@@ -6,18 +6,25 @@
     <meta name="description" content="Angelo Filippi - Consulente Informatico, Operatore NOC, Network & Systems Engineer. Specializzato in MikroTik, Linux, monitoraggio Zabbix e infrastrutture TLC." />
     <meta name="author" content="Angelo Filippi" />
     <title>Angelo Filippi | Consulente Informatico & Network Systems Engineer</title>
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    
+    <!-- Favicon SVG -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    
     <!-- Font Awesome icons -->
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+    
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    
     <style>
         :root {
             --bs-primary: #1e3a5f; /* Blu tecnico istituzionale */
             --bs-primary-rgb: 30, 58, 95;
+            --bs-accent: #00A8E8;  /* Azzurro rete / nodi */
         }
         body {
             font-family: 'Muli', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -82,14 +89,18 @@
             }
         }
         
-        /* Logo personalizzato in sidebar */
-        .brand-logo {
+        /* Contenitore Logo Geometrico SVG in Sidebar */
+        .brand-logo-container {
+            width: 130px;
+            height: 130px;
+            margin: 0 auto 0.75rem auto;
             border: 2px solid rgba(255, 255, 255, 0.2);
-            border-radius: 0.5rem;
-            padding: 0.75rem 1rem;
+            border-radius: 16px;
             background-color: rgba(0, 0, 0, 0.15);
-            display: inline-block;
-            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         /* Sezioni */
@@ -139,18 +150,29 @@
     </style>
 </head>
 <body id="page-top">
-    <!-- Barra di navigazione laterale con Logo integrato -->
+    <!-- Barra di navigazione laterale -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
-            <span class="d-block d-lg-none">Angelo Filippi | IT Consulting</span>
+            <span class="d-block d-lg-none fw-bolder" style="font-family: 'Saira Extra Condensed', sans-serif; letter-spacing: 0.05rem; color: #FFFFFF;">
+                ANGELO FILIPPI | IT
+            </span>
             <span class="d-none d-lg-block w-100">
-                <div class="brand-logo mx-auto text-center">
-                    <div style="font-family: 'Saira Extra Condensed', sans-serif; font-size: 1.8rem; font-weight: 700; letter-spacing: 0.05rem; line-height: 1.1; color: #ffffff;">
-                        ANGELO FILIPPI
-                    </div>
-                    <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15rem; color: #93c5fd; margin-top: 0.2rem;">
-                        IT Consulting
-                    </div>
+                <!-- Logo Vettoriale SVG personalizzato (Monogramma AF + Nodi di Rete) -->
+                <div class="brand-logo-container">
+                    <svg viewBox="0 0 200 200" width="105" height="105">
+                        <path d="M40,140 L80,100 L120,100 L160,60" fill="none" stroke="#00A8E8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="40" cy="140" r="14" fill="#1E3A5F" stroke="#00A8E8" stroke-width="4"/>
+                        <circle cx="80" cy="100" r="14" fill="#1E3A5F" stroke="#00A8E8" stroke-width="4"/>
+                        <circle cx="120" cy="100" r="14" fill="#1E3A5F" stroke="#00A8E8" stroke-width="4"/>
+                        <circle cx="160" cy="60" r="14" fill="#1E3A5F" stroke="#00A8E8" stroke-width="4"/>
+                        <text x="50" y="105" font-family="Arial, sans-serif" font-size="70" font-weight="bold" fill="#FFFFFF">AF</text>
+                    </svg>
+                </div>
+                <div class="fw-bolder text-uppercase" style="font-family: 'Saira Extra Condensed', sans-serif; font-size: 1.8rem; letter-spacing: 0.1rem; line-height: 1.1; color: #ffffff;">
+                    ANGELO FILIPPI
+                </div>
+                <div class="text-uppercase" style="font-size: 0.75rem; letter-spacing: 0.2rem; color: #93c5fd; margin-top: 0.2rem;">
+                    IT CONSULTING
                 </div>
             </span>
         </a>
